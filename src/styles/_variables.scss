@@ -1,0 +1,109 @@
+$position-values: (
+  0: 0,
+  20: 25%,
+  25: 25%,
+  30: 25%,
+  40: 25%,
+  50: 50%,
+  60: 50%,
+  70: 75%,
+  75: 75%,
+  80: 75%,
+  100: 100%
+) !default;
+
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer * .25,
+  2: $spacer * .5,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+) !default;
+
+
+/// Colors
+
+$white: #fff !default;
+$black: #000 !default;
+$folder-color: #c8ad7f;
+
+/// We use two slightly different greys for accessibility - @see "https://learnui.design/tools/accessible-color-generator.html"
+$bg-gray-primary: #959595 !default;
+$bg-gray-secondary: #dadada !default;
+
+$emphasis: $black !default;
+
+
+/// Box shadow
+
+$box-shadow:                  0 .5rem 1rem rgba(#000, .15) !default;
+$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
+$box-shadow-lg:               0 1rem 3rem rgba($black, .175) !default;
+
+// Font sizes
+
+$font-size-root:              null !default;
+$font-size-base:              16px !default;
+$font-size-xs:                $font-size-base * .5 !default;
+$font-size-sm:                $font-size-base * .875 !default;
+$font-size-md:                $font-size-base * 1 !default;
+$font-size-lg:                $font-size-base * 1.25 !default;
+
+$font-weight-lighter:         lighter !default;
+$font-weight-light:           300 !default;
+$font-weight-normal:          400 !default;
+$font-weight-bold:            700 !default;
+$font-weight-bolder:          bolder !default;
+
+$font-weight-base:            $font-weight-normal !default;
+
+$line-height-base:            1.5 !default;
+$line-height-sm:              1.25 !default;
+$line-height-lg:              2 !default;
+
+$h1-font-size:                $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default;
+$h5-font-size:                $font-size-base * 1.25 !default;
+$h6-font-size:                $font-size-base !default;
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size
+) !default;
+
+$border-radius:               0.5rem !default;
+$border-radius-sm:            0.25rem !default;
+$border-radius-lg:            1rem !default;
+$border-radius-pill:          50rem !default;
+
+/// Padding / Margin
+$spacing-extra-small: 0.25rem !default;
+$spacing-small: 0.5rem !default;
+$spacing-medium: 0.75rem !default;
+$spacing-large: 1rem !default;
+$spacing-extra-large: 1.5rem !default;
+
+$spacing-extra-small-negative: -0.25rem !default;
+$spacing-small-negative: -0.5rem !default;
+$spacing-medium-negative: -0.75rem !default;
+$spacing-large-negative: -0.1rem !default;
+$spacing-extra-large-negative: -1.5rem !default;
+
+
+// Buttons
+
+$button-size-small: 48px;
+
+// Z-index
+
+$sidebar-z-index: 50 !default;
+$button-z-index: 10 !default;
+$burger-z-index: 100 !default;

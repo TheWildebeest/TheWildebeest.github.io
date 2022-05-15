@@ -1,0 +1,162 @@
+@use 'styles/css-reset';
+@use 'styles/colors' as *;
+@use 'styles/mixins' as *;
+@use 'styles/breakpoints' as *;
+
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Oxygen, Cantarell, sans-serif;
+  color: $grey;
+}
+
+body {
+  background-color: $dark-grey;
+}
+
+header {
+  @include flex(row, center, center);
+  height: 80px;
+  @include media-breakpoint-up(lg) {
+    height: 120px;
+  }
+  border-bottom-width: 2px;
+  border-bottom-color: $grey;
+  border-bottom-style: solid;
+  box-shadow: $grey 0px 5px 15px;
+  // &:hover {
+  //   border-bottom-color: $green;
+  //   box-shadow: $green 0px 5px 15px;
+  //   color: $green;
+  // }
+
+  width: 100%;
+
+  img {
+    cursor: pointer;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    @include media-breakpoint-up(md) {
+      width: 80px;
+      height: 80px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 120px;
+      height: 120px;
+    }
+    &:hover {
+      transform: scale(120%);
+    }
+  }
+
+  nav {
+    @include flex(row, center, center);
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+
+    ul {
+      height: 100%;
+      @include flex(row, center, center);
+      list-style-type: none;
+      margin-block-start: 0;
+      margin-block-end: 0;
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+      padding-inline-start: 0;
+      margin: 0;
+      width: 100%;
+      max-width: 800px;
+
+      li {
+        @include flex(row, center, center);
+        height: 100%;
+        text-align: center;
+        width: 33%;
+        font-size: 1.2rem;
+        @include media-breakpoint-up(md) {
+          font-size: 1.4rem;
+        }
+        @include media-breakpoint-up(lg) {
+          font-size: 1.6rem;
+        }
+
+        a:hover {
+          color: $pink;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+main {
+  margin-top: 60px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  @include media-breakpoint-up(md) {
+    max-width: map-get($grid-breakpoints, 'sm');
+    margin-top: 80px;
+  }
+  @include media-breakpoint-up(lg) {
+    max-width: map-get($grid-breakpoints, 'md');
+    margin-top: 120px;
+  }
+  @include media-breakpoint-up(xl) {
+    max-width: map-get($grid-breakpoints, 'lg');
+  }
+}
+
+app-section-title {
+  h2 {
+    width: max-content;
+    margin: 0;
+    margin-bottom: 2rem;
+    @include media-breakpoint-up(md) {
+      margin-bottom: 4rem;
+    }
+    padding-bottom: 0.5rem;
+    border-bottom: 2px $green solid;
+  }
+}
+
+p, ul {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+a.link {
+  color: $pink;
+  text-decoration: underline;
+  text-decoration-color: $grey;
+  text-decoration-thickness: 1px;
+}
+
+.green {
+  color: $green;
+}
+
+app-footer {
+  text-align: center;
+  display: block;
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: rgba($grey, 60%) 1px solid;
+
+  * {
+    color: rgba($grey, 60%);
+    font-size: 0.85rem;
+  }
+}
+
+code {
+  display: inline-block;
+  padding: 2px 6px;
+  margin: 0px 6px;
+  background-color: $grey;
+  color: $dark-grey;
+  border-radius: 0.25rem;
+  font-family: monospace, monospace;
+}
